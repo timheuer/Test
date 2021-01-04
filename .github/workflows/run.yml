@@ -5,4 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./action
+        
+      - name: Failed step
+        uses: ./action
+
+      - name: Do another thing
+        run: echo "This is another step"
+      
+      - name: Last thing
+        run: echo "Last step"
